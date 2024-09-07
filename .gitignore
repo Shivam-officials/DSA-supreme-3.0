@@ -3,7 +3,6 @@
 /bin/
 /out/
 /obj/
-/.vscode/
 
 # Ignore CMake build files
 CMakeFiles/
@@ -22,7 +21,7 @@ Makefile
 # Ignore debugging files
 *.pdb
 *.ilk
-
+*.json
 # Ignore VS Code workspace settings
 .vscode/
 
