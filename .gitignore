@@ -3,7 +3,7 @@
 /bin/
 /out/
 /obj/
-.vscode/
+/.vscode/
 
 # Ignore CMake build files
 CMakeFiles/
