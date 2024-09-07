@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0",
+      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

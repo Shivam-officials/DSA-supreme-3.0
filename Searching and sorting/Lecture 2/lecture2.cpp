@@ -126,7 +126,7 @@ double findExactSqrt(int number) {
            ans = i;
        }
     cout<<ans;
-
+    return ans;
 
 }
 
@@ -264,7 +264,7 @@ void findElementIndexInNearlySortedArray(const std::vector<int> & v, int target)
     int start = 0;
     int end = v.size()-1;
     int mid;
-    int ans;
+    int ans = -1;
     while (start<=end) {
         mid = start + (end-start)/2;
 
