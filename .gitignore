@@ -1,0 +1,33 @@
+# Ignore build directories globally
+**/build/
+**/bin/
+**/out/
+**/obj/
+
+# Ignore CMake build files globally
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+
+# Ignore compiled object files and executables globally
+**/*.o
+**/*.obj
+**/*.exe  # Ignore executable files
+**/*.dll
+**/*.so
+**/*.dylib
+
+# Ignore debugging files globally
+**/*.pdb
+**/*.ilk
+
+# Ignore VS Code workspace settings globally
+**/.vscode/
+
+# Ignore log files globally
+**/*.log
+
+# Ignore temporary files globally
+**/*.tmp
+**/*.temp
