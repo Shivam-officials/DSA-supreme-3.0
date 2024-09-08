@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// https://leetcode.com/problems/single-element-in-a-sorted-array/description/
+// leetcode - 540  https://leetcode.com/problems/single-element-in-a-sorted-array/description/
 
 //  Find odd occurring element:
 
