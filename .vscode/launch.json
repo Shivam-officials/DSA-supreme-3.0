@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/Searching and sorting/Lecture 2",
-      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/Searching and sorting/Lecture 2/build/Debug/outDebug",
+      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/Searching and sorting/Lecture 3",
+      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/Searching and sorting/Lecture 3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
