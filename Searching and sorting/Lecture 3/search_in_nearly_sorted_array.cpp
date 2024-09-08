@@ -2,6 +2,12 @@
 #include <iostream>
 using namespace std;
 
+
+// Given a sorted array arr[l of size N, some elements of array are arr(il may be moved to either of the adjacent positions, i.e.,
+// present at or arr(i-l) i.e. arr(i) can only be swapped with either or arr[i-l). The task is to search for an element in this array.
+// Input: arr() = {10, 3, 40, 20, 50, 80, 70}, key = 40 Output: 2
+// Explanation: Output is index of 40 in given array i.e.2
+
 int searchInNearlySortedArray(vector<int>nums,int target
 ){
      int start = 0;
