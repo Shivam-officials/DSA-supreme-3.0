@@ -4,6 +4,6 @@ using namespace std;
 
 int main()
 {
-    /* code */
+    vector<int>v{  };
     return 0;
 }
