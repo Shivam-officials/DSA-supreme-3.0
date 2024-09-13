@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <set>
 #include <vector>
@@ -85,18 +86,33 @@ vector<int> kClosestElementsTwoPointerExpandingWindow(vector<int> nums, int k,in
             return vector<int> (nums.begin() + low + 1, nums.begin() + high);
 }
 
+
+
+
+// sort with custom comparator ans return the first k elements 
+vector<int> kClosestElementWithCustomComparatorSorting(vector<int>v , int k , int x){
+sort(v.begin(),v.end(),[&x](int a , int b){
+  return abs(a-x)< abs(b-x);
+});
+
+vector<int> ans ;
+for(int i = 0; i < k; i++)
+{
+  ans.push_back(v[i]);
+}
+sort(ans.begin(),ans.end());
+for_each(ans.begin(), ans.end(), printElement);
+return ans;
+}
+
 int main() {
 
-  vector<int> v{1, 2, 3, 4, 5};
-  // vector<int> v{2,4,6,8,10,12,14,16,18,20,24,26,28};
-  // auto lowerBoundIndex = lower_bound(v.begin(),v.end(),4) ;
-  // int lowerIndex = lower_bound(v.begin(),lowerBoundIndex,5) -v.begin();
-  // auto it = upper_bound(v.begin(),v.end(),4);
-  // cout << lowerIndex;
-  int x = 9;
-
+  vector<int> v{1,2};
+  int x = 3;
+  
+  // for_each(v.begin(), v.end(), printElement);
   // auto ans = kClosestElementsTwoPointerShrinkingWindow(v, 5, 11);
-  auto ans = kClosestElementsTwoPointerExpandingWindow(v, 4, 3);
-  for_each(ans.begin(), ans.end(), printElement);
+  // auto ans = kClosestElementsTwoPointerExpandingWindow(v, 4, 3);
+  kClosestElementWithCustomComparatorSorting(v, 1, 1);
   return 0;
 }
