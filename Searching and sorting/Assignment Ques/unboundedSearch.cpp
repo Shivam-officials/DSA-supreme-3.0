@@ -3,6 +3,9 @@
 #include <vector>
 using namespace std;
 
+
+// TC = O(log(n))
+
 // Function to perform Binary Search between a given range [start, end]
 int binarySearch(const vector<int> &v, int start, int end, int &target) {
   

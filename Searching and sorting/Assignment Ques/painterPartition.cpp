@@ -5,6 +5,8 @@ using namespace std;
 
 // https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
 
+// Time Complexity: O(n * log(sum - max)), Space Complexity: O(1)
+
 bool painterRequirement(int arr[], long long currentMin, int n, int k) {
     int painterRequired = 1;  // Start with 1 painter
     

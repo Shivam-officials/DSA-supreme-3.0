@@ -1,17 +1,34 @@
 #include <bits/stdc++.h>
+#include <climits>
 using namespace std;
 
 
 // https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
 
+
+// Time Complexity: O(n * log(sum - max)), Space Complexity: O(1)
+
+/**
+ * @note This problem involves finding the minimum possible maximum sum of a subarray
+ * when the number of subarrays is fixed. You can also find the highest sum by adjusting
+ * the binary search approach to maximize the sum.
+ */
+
+
 // Utility function to check how many students (or partitions) are required
 // when the maximum sum of pages (or board lengths) for a student is curr_min.
-int studentRequired(int arr[], int n, int curr_min) {
+bool studentRequired(int arr[], int n, int curr_min, int m) {
     int students = 1;  // At least one student is required
     int curr_sum = 0;
 
     // Traverse through the array to allocate books (or boards) to students
     for (int i = 0; i < n; i++) {
+
+        if(arr[i]>curr_min)
+        {
+            return false;
+        }
+        
         // If adding the current element exceeds curr_min,
         // allocate books (or boards) to a new student
         if (curr_sum + arr[i] > curr_min) {
@@ -21,15 +38,16 @@ int studentRequired(int arr[], int n, int curr_min) {
             curr_sum += arr[i];  // Otherwise, add current element to current student's allocation
         }
     }
-    return students;  // Return the number of students required
+    return students <= m;  // Return the number of students required
 }
 
 // Function to find the minimum possible maximum sum of pages when partitioned into m students
 
-// INTUTION : simple we will take the search space of ans and then use binary search to navigate to the solution by verifying 
-// each mid points that it can be ans (by deviding subarrays while making sure that the sum of subarray does not exceed mid bcz that is 
-// the maximum sum of subarray in that permutation and combination) and if number of subarray is greater or equal it can a potential and we 
-// search in left otherwise in right
+/**
+ * @note INTUTION : simple we will take the search space of ans and then use binary search to navigate to the solution by verifying 
+ *  each mid points that it can be ans (by treating mid as the maximum value as sum of all the elemants that an  subarray can hold, by  making        * subarrays while making sure that the sum of subarray does not exceed mid bcz that is the maximum sum of subarray in that permutation and           * combination)ans thus checking how many subarray will be there under these constrains and if  * * number of subarray is greater or equal to current * mid it can a potential ans and we search in left to minimise otherwise in right
+ */
+
 
 int findPages(int arr[], int n, int m) {
     // If there are fewer books (or boards) than students, it's impossible to partition, so return -1
@@ -49,12 +67,11 @@ int findPages(int arr[], int n, int m) {
     while (start <= end) {
         int mid = (start + end) / 2;  // Mid represents the current "maximum sum" we're testing
 
-        // Count how many students are required if the maximum sum allowed is mid
-        int students = studentRequired(arr, n, mid);
+        
 
         // If the number of students required is less than or equal to the given number of students,
         // then this mid could be a potential answer, but we try to minimize it by going left.
-        if (students <= m) {
+        if (studentRequired(arr, n, mid,m)) {
             result = mid;  // Store the current mid as a potential answer
             end = mid - 1;  // Move left to try and find a smaller valid maximum sum
         } else {
