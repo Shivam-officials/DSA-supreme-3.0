@@ -3,6 +3,9 @@
 #include <vector>
 using namespace std;
 
+
+// https://www.spoj.com/problems/EKO/
+
 // Function to check if cutting trees at a certain height will yield
 // at least the required amount of wood (requiredMeters).
 bool isSolution(vector<int>& trees, int height, int requiredMeters) {

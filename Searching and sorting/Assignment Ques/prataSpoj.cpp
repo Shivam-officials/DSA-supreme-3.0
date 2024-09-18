@@ -4,6 +4,8 @@
 using namespace std;
 
 
+// https://www.spoj.com/problems/PRATA/
+
 // TC = O(n * RequiredParathas * log(maxRank * RequiredParathas ^ 2))
 
 // Function to check if it is possible to cook the required number of prathas

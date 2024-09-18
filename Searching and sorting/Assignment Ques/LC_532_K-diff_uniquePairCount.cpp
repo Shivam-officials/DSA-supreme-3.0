@@ -7,10 +7,11 @@
 #include <unordered_set>
 #include <vector>
 
+using namespace std;
 
 // LC 532 https://leetcode.com/problems/k-diff-pairs-in-an-array/
 
-using namespace std;
+
 
  bool bsElementFound(vector<int> nums, int start, int target)
         {
@@ -76,7 +77,7 @@ int k_diff_uniquePair_twoPointer(vector<int> nums, int k) {
 
 // space complexity = 0(n2) and TC = 0(nlogn)
 // Function to find all unique pairs in the array with a difference of k
-    int k_diff_uniquePair_WithBinarySearch(vector<int>& nums, int k) {
+int k_diff_uniquePair_WithBinarySearch(vector<int>& nums, int k) {
         set<pair<int, int>> sets;  // Set to store unique pairs
         sort(nums.begin(), nums.end());  // Sort the array for binary search
 
@@ -89,7 +90,9 @@ int k_diff_uniquePair_twoPointer(vector<int> nums, int k) {
             }
         }
         return sets.size();  // Return the number of unique pairs
-    }
+}
+
+
 
 int main() {
   vector<int> nums{1, 3, 1, 5, 4};

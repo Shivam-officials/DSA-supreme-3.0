@@ -15,8 +15,7 @@ void printElement(int a) { cout << a << endl; }
 //  of x and for tht we take the whole array as window and shrink that window
 //  based on who is farthest untill the window is only contain the k elements
 //  TC o(n-k) SC o(1)
-vector<int> kClosestElementsTwoPointerShrinkingWindow(vector<int> nums, int k,
-                                                      int x) {
+vector<int> kClosestElementsTwoPointerShrinkingWindow(vector<int> nums, int k,int x) {
 
   // Initialize two pointers: low at the beginning, high at the end of the array
   int low = 0;
@@ -44,8 +43,7 @@ vector<int> kClosestElementsTwoPointerShrinkingWindow(vector<int> nums, int k,
 // values low and high it will make sure that window contains only required
 // values and also helps to handle many edge cases by defualt like edge cases
 // when the array size is one or two
-vector<int> kClosestElementsTwoPointerExpandingWindow(vector<int> nums, int k,
-                                                      int x) {
+vector<int> kClosestElementsTwoPointerExpandingWindow(vector<int> nums, int k, int x) {
 
   // Find the index of the first element that is not less than x using
   // lower_bound
@@ -83,8 +81,7 @@ vector<int> kClosestElementsTwoPointerExpandingWindow(vector<int> nums, int k,
 }
 
 // sort with custom comparator ans return the first k elements
-vector<int> kClosestElementWithCustomComparatorSorting(vector<int> v, int k,
-                                                       int x) {
+vector<int> kClosestElementWithCustomComparatorSorting(vector<int> v, int k,int x) {
   // Step 1: Sort the vector 'v' based on closeness to 'x'
   std::sort(v.begin(), v.end(), [&x](int a, int b) {
     // Custom comparator: Compare based on absolute difference from 'x'
