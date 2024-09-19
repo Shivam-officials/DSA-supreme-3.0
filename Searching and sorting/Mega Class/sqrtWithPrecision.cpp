@@ -57,7 +57,7 @@ double sqrtWithPrecision_binarySearch(int n, int precision) {
   double differ = 1 / pow(10, precision);  // Precision threshold for stopping the binary search
    
   double start = 0;  // Start of binary search range
-  double end = n / 2;  // End of binary search range
+  double end = (double)n / 2;  // End of binary search range
   double mid;  // Midpoint of the binary search range
   double ans;  // Variable to store the answer
   
