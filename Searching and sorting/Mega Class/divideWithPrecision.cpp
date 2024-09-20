@@ -36,8 +36,9 @@ double divide(int dividend, int divisor, int precision) {
 
   int absDivident = abs(dividend);
   int absDivisor = abs(divisor);
-  double start = absDivident /absDivisor; // simulate here the simple binary search for int value ans
+  int baseAns  = absDivident /absDivisor; // simulate here the simple binary search for int value ans
   // int end = absDivident;
+  double start = baseAns;
   int mid;
   int ans = 0;
 
