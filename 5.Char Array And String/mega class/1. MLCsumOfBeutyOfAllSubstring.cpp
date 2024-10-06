@@ -7,6 +7,9 @@
 #include <vector>
 using namespace std;
 
+// https://leetcode.com/problems/sum-of-beauty-of-all-substrings/
+
+
 // TC = O(n^2)  Sc= O(1)
 int beautySumWithMap(string s) {
   // Initialize beautySum to store the cumulative beauty of all substrings
@@ -49,6 +52,8 @@ int beautySumWithMap(string s) {
   return beautySum;
 }
 
+
+
 // TC = O(n^2) SC = O(1) // same logic bt faster bcz of no overhead of hash, buckets etc
 int beutySumWithCustomHash_optimised(string s) {
     int beutySum = 0;
@@ -82,6 +87,8 @@ int beutySumWithCustomHash_optimised(string s) {
     // Return the total beauty sum of all substrings
     return beutySum;
 }
+
+
 
 
 int main() {

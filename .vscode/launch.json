@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0",
-      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/build/Debug/outDebug",
+      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/5.Char Array And String/mega class",
+      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/5.Char Array And String/mega class/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
