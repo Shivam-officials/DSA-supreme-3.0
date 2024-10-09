@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/remove-all-occurrences-of-a-substring/escription/
+// https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
 
 #include <iostream>
 #include <string>

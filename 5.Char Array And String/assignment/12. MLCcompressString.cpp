@@ -10,7 +10,7 @@ using namespace std;
     We continue this process until we have processed all characters, thus compressing the array in place.
  */
 
-//RUN LENGTH ENCODING
+//note: RUN LENGTH ENCODING
 
 // works bt with a lot of  0(N) space complexity
 // SC = O(N) TC = O(N);

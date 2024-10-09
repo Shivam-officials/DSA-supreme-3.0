@@ -48,7 +48,7 @@ string largestNumber_OptimisedForReadablityAndCoding(vector<int> &nums)
         return "0";
 
     // Use the 'accumulate' function to concatenate all sorted strings into one large string
-    // Start with an empty string as the initial value
+    // Start with an empty string as the initial value 
     return accumulate(numString.begin(), numString.end(), string());
 }
 

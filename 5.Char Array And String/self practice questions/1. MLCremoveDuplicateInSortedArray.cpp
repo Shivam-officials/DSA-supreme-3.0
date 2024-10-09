@@ -3,6 +3,9 @@
 #include <vector>
 using namespace std;
 
+
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
+
 // TC = O(N) SC = O(1)
 int removeDuplicates(vector<int>& nums) {
     // Track the current number and initialize pointer p for tracking the next position
@@ -35,7 +38,7 @@ int removeDuplicates(vector<int>& nums) {
 }
 
 /** 
- *@note remember to use map if u have to deal with the occurances of something
+ *@note // note: remember to use map if u have to deal with the occurances of something
 */
 
 // TC = O(N) SC = O(N)
@@ -43,15 +46,11 @@ int removeDuplicates_withHashMap_easyImplementation(vector<int>& nums) {
      unordered_map<int,int>mp;
      int index = 0;
      for(auto ch:nums){
-        if(mp.find(ch)==mp.end()){
+        if(mp.find(ch)==mp.end() || mp[ch]==1){
             nums[index++] = ch;
             mp[ch]++;
-        }else{
-            if(mp[ch]==1){
-                mp[ch]++;
-                nums[index++]=ch;
-            }
         }
+       
      }
      return index;
 }

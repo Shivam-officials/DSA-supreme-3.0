@@ -1,6 +1,7 @@
 #include <algorithm> // Include for STL algorithms like replace
 #include <cstring>   // Include for C-style string functions like strlen
 #include <iostream>  // Include for standard input/output
+#include <string>
 #include <vector>    // Include for using vectors, though not used here
 
 using namespace std; // Use standard namespace
@@ -45,7 +46,7 @@ int main() {
     replace(chArray, chArray + len, ' ', '_'); // Replace spaces with underscores
 
     cout << "The new array is: " << chArray; // Print the modified string
-    
+   
 
     return 0; // Indicate that the program ended successfully
 }

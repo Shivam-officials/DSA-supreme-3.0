@@ -22,30 +22,21 @@ void showVectorMatrix(vector<vector<string>> v) {
   }
 }
 
-// TC = O(n^2 m log m) SC = O(n*m)
+// TC = O(n * m log m) SC = O(n*m) // n is the number of strings. & m is the average length of the strings.
 vector<vector<string>> groupAnagrams_ME_BruteFOrce(vector<string> &strs) {
-  vector<vector<string>> ans;
+       unordered_map<string,vector<string>> mp;
+       for(auto str:strs){
+        string sortedStr = str;
+        sort(sortedStr.begin(),sortedStr.end());
+        mp[sortedStr].push_back(str);
+       } 
 
-  vector<int> anagramMark(strs.size(), 0);
-  for (int i = 0; i < strs.size(); i++) {
-    if (anagramMark[i] == 1) {
-      continue;
-    }
+       vector<vector<string>> ans;
+       for(auto pr:mp){
+        ans.push_back(pr.second);
+       }
 
-    string ch = strs[i];
-    vector<string> currentGroup{ch};
-    sort(ch.begin(), ch.end());
-    for (int j = i + 1; j < strs.size(); j++) {
-      string nextWord = strs[j];
-      sort(nextWord.begin(), nextWord.end());
-      if (ch == nextWord) {
-        currentGroup.push_back(strs[j]);
-        anagramMark[j] = 1;
-      }
-    }
-    ans.push_back(currentGroup);
-  }
-  return ans;
+       return ans;
 }
 
 

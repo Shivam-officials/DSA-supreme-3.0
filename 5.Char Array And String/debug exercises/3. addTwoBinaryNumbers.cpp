@@ -29,6 +29,6 @@ string addBinary(string a, string b) {
 
 int main(int argc, char const *argv[])
 {
-    
+    cout << addBinary("11", "10");
     return 0;
 }

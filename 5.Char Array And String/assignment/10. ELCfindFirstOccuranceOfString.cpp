@@ -42,10 +42,21 @@ int strStr(string &haystack, string &needle) {
     return ans; // If no match is found, return -1
 }
 
+
+int byDefualtMethod(string heystack, string needle){
+    int ans = -1;
+    for (int i = 0; i < heystack.length(); i++) {
+        string currentString = heystack.substr(i,needle.length());
+        if(currentString ==needle) return i;
+    }
+    return -1; 
+}
+
 int main(){
     
     string hystck = "sadbutsad", nidle = "sad";
-    cout << strStr(hystck, nidle);
+    cout << strStr(hystck, nidle)<<endl;
+    cout << byDefualtMethod(hystck, nidle)<<endl;
     return 0;
 }
 
