@@ -49,9 +49,8 @@ vector<int> givePrimeSieveFrom2(int n) {
 // This function computes all prime numbers in the given range [low, high] using
 // the segmented sieve approach.
 // - First, it computes the primes up to sqrt(high) using a base sieve, because
-// primes greater than sqrt(high) cannot have multiples within the range.
-// - Then, it marks multiples of each base prime in the range [low, high] as
-// non-prime.
+// primes greater than sqrt(high) cannot have multiples within the range. reason lies in sieve optimisation which start marking from i^2 
+// - Then, it marks multiples of each base prime in the range [low, high] as non-prime.
 // - Finally, it returns all the primes in the range by checking the remaining
 // unmarked numbers.
 
@@ -110,7 +109,7 @@ vector<int> primesInRangeUsingSieve(int low, int high) {
 }
 
 int main(int argc, char const *argv[]) {
-  int l = 110, h = 130;
+  int l = 156, h = 180;
     auto ans = primesInRangeUsingSieve(l, h);
     for (auto prime : ans) {
     cout << prime << " ";
