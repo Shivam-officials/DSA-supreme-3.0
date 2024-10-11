@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/5.Char Array And String/mega class",
-      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/5.Char Array And String/mega class/build/Debug/outDebug",
+      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/6. basic maths and pointers/2. Optimising seive and segmented seive",
+      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/6. basic maths and pointers/2. Optimising seive and segmented seive/build/Release/outRelease",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
