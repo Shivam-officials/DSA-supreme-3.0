@@ -15,7 +15,6 @@ int main(int argc, char const *argv[])
     cout << *cptr <<endl; //IMP
     cout << *(cptr+3) <<endl;
 
-    cout << (cptr + 3); //IMP if try to print any the address of the char array it will print the string from there on string of a address till end
-
+    cout << (cptr + 3)<<endl; //IMP if try to print any the address of the char array it will print the string from there on string of a address till end
     return 0;
 }

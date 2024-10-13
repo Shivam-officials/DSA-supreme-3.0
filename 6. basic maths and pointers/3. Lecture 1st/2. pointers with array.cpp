@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     cout << arr<<endl;
     cout << &arr<<endl; //IMP
     cout << arr[0]<<endl;
-    cout << &arr[0]<<endl; //IMP
+    cout << &arr[2]<<endl; //IMP
     cout << ptr<<endl;
     cout << &ptr<<endl;
     cout << *ptr<<endl;
@@ -19,8 +19,7 @@ int main(int argc, char const *argv[])
     cout<<*(arr + 1)<<endl; //IMP
     cout<<*(arr+3)<<endl;
 
-
-
+    
  
 
     return 0;

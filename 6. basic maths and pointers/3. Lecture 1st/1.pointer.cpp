@@ -21,4 +21,7 @@ int main(int argc, char const *argv[])
     // 
     int* sptr = 0;
     cout << sptr;
+
+    
+
 }
