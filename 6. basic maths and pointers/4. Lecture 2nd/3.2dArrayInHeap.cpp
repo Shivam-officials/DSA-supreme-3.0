@@ -42,5 +42,8 @@ int main(int argc, char const *argv[]) {
   }
   delete[] arr; // Free the main array
 
+  int b[5] = {1,2,3,4,5};
+  
+
   return 0;
 }
