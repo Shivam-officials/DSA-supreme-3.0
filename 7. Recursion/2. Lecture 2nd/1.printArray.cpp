@@ -2,6 +2,8 @@
 using namespace std;
 
 
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 void printArray(int *array , int size,int index){
    if(index == size) // base case
    {

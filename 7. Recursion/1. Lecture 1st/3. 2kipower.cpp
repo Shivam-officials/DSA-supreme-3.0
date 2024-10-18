@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+//Time Complexity: O(n)
+// Space Complexity: O(n)
 int powerOfTwo(int n){
 
     // base case

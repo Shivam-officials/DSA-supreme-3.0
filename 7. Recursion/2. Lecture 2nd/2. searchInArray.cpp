@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+//TC O(n) 
+//SC O(n)
 bool searchInArray(int *array, int size, int target, int index) {
 
   // base case

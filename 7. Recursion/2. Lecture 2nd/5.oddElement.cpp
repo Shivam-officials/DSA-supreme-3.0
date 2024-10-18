@@ -3,6 +3,7 @@
 using namespace std;
 
 
+//TC = O(n) SC = O(n)
 void oddPrint(vector<int>array,int index){
 // base case
 if(index == array.size()) return ;

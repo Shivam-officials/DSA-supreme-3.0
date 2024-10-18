@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+//TC = O(n) SC = O(n)
 void minInArrayRecursive(vector<int> array, int size, int index, int &ans) {
 
   // base condition

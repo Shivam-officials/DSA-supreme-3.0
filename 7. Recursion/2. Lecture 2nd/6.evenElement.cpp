@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-
+//TC = O(n) SC = O(n)
 void evenPrint(vector<int>array,int index){
 // base case
 if(index == array.size()) return ;

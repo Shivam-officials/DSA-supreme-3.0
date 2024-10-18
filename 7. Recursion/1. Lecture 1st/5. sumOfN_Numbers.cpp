@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-
+//Time Complexity: O(n)
+// Space Complexity: O(n)
 int sumOfNRecursion(int n) {
     // Base case: if n is 0, return 0
     // This is the stopping condition for the recursion.

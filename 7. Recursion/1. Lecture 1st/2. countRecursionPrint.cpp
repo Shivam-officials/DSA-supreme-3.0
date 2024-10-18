@@ -4,6 +4,8 @@ using namespace std;
 
 
 // tail recursion bcz recursive call is at end
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 void printCountNto1(int n){
 
     // base case

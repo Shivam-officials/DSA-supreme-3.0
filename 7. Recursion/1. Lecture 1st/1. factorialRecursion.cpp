@@ -3,6 +3,7 @@
 using namespace std;
 
 
+//TC = O(n) SC = O(n)
 int getFactorial(int n){
 
     // base case

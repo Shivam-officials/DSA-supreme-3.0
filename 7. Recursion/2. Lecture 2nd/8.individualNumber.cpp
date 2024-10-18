@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-
+//TC = O(n) SC = O(n)
 void individualDigits(int num){
     // base case
     if(num == 0) return ;
