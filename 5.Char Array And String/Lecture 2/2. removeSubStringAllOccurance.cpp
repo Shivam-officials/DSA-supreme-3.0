@@ -21,8 +21,6 @@ string remove_all_occurrences_of_a_substring_BRUTEFORCE_ME(string str,string par
 int main()
 {
    cout << remove_all_occurrences_of_a_substring_BRUTEFORCE_ME("axxxxyyyyb","xy");
-   
-
     
     return 0;
 }
