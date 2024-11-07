@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+
+
 void findAllSubsequence(string inputString, string outputString,  int index,vector<string>&ans) {
 
   // base case ... rukna kab hai

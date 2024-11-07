@@ -17,6 +17,6 @@ int fibonacci(int n) {
 
 int main(int argc, char const *argv[])
 {
-    cout << fibonacci(9);
+    cout << fibonacci(5);
     return 0;
 }
