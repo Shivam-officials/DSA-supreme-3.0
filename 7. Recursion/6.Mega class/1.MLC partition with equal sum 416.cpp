@@ -97,7 +97,7 @@ bool canReturnRe_ME_Optimised(vector<int> &nums, int index, int include,int excl
 
 // note: INTUTION --- The intuition behind this code is based on the concept of subset sum. Here, we're trying to see if we can divide an array into two equal parts, meaning each part has the same sum. This problem is essentially about finding whether there exists a subset of the array that adds up to half the total sum. If such a subset exists, then the rest of the elements will naturally sum up to the other half, achieving an equal partition
 // Recursive function to check if a subset with the given target sum exists
-bool canReturnRe_Sir(vector<int> &nums, int index, int target) {
+bool canReturnRe_Sir_Best(vector<int> &nums, int index, int target) {
     // Base case: If we've checked all elements
     if(index == nums.size()) {
         // Check if the target sum is zero, meaning we found a valid subset
@@ -107,10 +107,10 @@ bool canReturnRe_Sir(vector<int> &nums, int index, int target) {
     // Recursive case: Try including and excluding the current element
 
     // Option 1: Include the current element in the subset
-    bool include = canReturnRe_Sir(nums, index + 1, target - nums[index]);
+    bool include = canReturnRe_Sir_Best(nums, index + 1, target - nums[index]);
     
     // Option 2: Exclude the current element from the subset
-    bool exclude = canReturnRe_Sir(nums, index + 1, target);
+    bool exclude = canReturnRe_Sir_Best(nums, index + 1, target);
 
     // Return true if either including or excluding leads to a valid subset
     return include || exclude;
@@ -120,12 +120,15 @@ int main() {
   vector<int> nums{1, 5, 11, 5}; // Test case that should return true
   // vector<int> nums{1, 2, 3, 5}; // Test case that should return false
 
+
   vector<int> include{};
   vector<int> exclude{};
 
   cout<< canReturnRe_ME_MoreUnderstandbleBtHIghSpaceComplexityDueToVectorCopying( nums, 0, include, exclude)<< endl;
   cout << canReturnRe_ME_Optimised(nums, 0, 0, 0) << endl;
-  cout << "-----------------------------------------------------------------------------------------------";
+
+  cout << "--------------------------------------------------"<<endl;
+
   int sum = accumulate(nums.begin(), nums.end(), 0);
 
     // If the sum is odd, it's impossible to partition it into two equal subsets
@@ -133,7 +136,7 @@ int main() {
         cout << "This is not possible because an odd sum can't be divided into two equal parts.";
     } else {
         // Call the recursive function with target as half of the total sum
-        cout << canReturnRe_Sir(nums, 0, sum / 2);
+        cout << canReturnRe_Sir_Best(nums, 0, sum / 2);
     }
 
   return 0;
