@@ -37,6 +37,32 @@ int removeDuplicates(vector<int>& nums) {
     return p; // Return the count of valid elements (at most two duplicates)
 }
 
+
+//above code with more initution and more understanble  TC = O(N) SC= O(1) 
+int solveIt(vector<int> &v,int maximumTime) {
+  int next = 1, times = 1;
+  int matcher = v[0];
+
+  int k = 1; 
+  // chalte jao kuch bhi 2 times se kam mile piche feko aur kuch nya mile to bhi piche fek do aur times ko nya hai to 1 kr do
+  while (k < v.size()) {
+    if (v[k] == matcher) {
+        times++;
+      if (times <= maximumTime) {
+        v[next++] = v[k];
+      }
+    } else {
+      matcher = v[k];
+      v[next++] = v[k];
+      times = 1;
+    }
+    k++;
+  }
+  // remove rest of them
+
+  return next;
+}
+
 /** 
  *@note // note: remember to use map if u have to deal with the occurances of something
 */

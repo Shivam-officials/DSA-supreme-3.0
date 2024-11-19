@@ -6,21 +6,32 @@ using namespace std;
 
 //!TC = cant solve for now 
 int minScoreTriangulation(vector<int> &values, int i, int j) {
-    // Base case: No triangle possible if only two points remain
+    // Base case: 
+    // If there are only two vertices left (i + 1 == j), no triangle can be formed, so return 0.
     if (i + 1 == j) return 0;
 
-    int ans = INT_MAX;
-    // Try all possible points `k` to form a triangle with vertices `i` and `j`
+    int ans = INT_MAX; // Initialize the minimum score as the maximum possible value.
+
+    // Iterate over all possible points `k` between `i` and `j` to try splitting the polygon.
+    // `k` represents the vertex that forms a triangle with vertices `i` and `j`.
     for (int k = i + 1; k < j; k++) {
-        // Compute the score for the current triangle and recursively solve for subproblems (recursion relation)
+        // **Current triangle contribution**:
+        // The triangle formed by vertices `i`, `j`, and `k` has a score of `values[i] * values[j] * values[k]`.
+        // Add the score of this triangle to the scores of the remaining subproblems:
+        // - Subproblem (i, k): Solve for the polygon formed by vertices from `i` to `k`.
+        // - Subproblem (k, j): Solve for the polygon formed by vertices from `k` to `j`.
         int recurAns = values[i] * values[j] * values[k] 
-                     + minScoreTriangulation(values, i, k) 
-                     + minScoreTriangulation(values, k, j);
-        // Update the minimum score
+                     + minScoreTriangulation(values, i, k)  // Solve the left subproblem
+                     + minScoreTriangulation(values, k, j); // Solve the right subproblem
+
+        // Update the minimum score for this subproblem `(i, j)`
         ans = min(ans, recurAns);
     }
+
+    // Return the minimum triangulation score for vertices `i` to `j`.
     return ans;
 }
+ 
 
 int main()
 {
