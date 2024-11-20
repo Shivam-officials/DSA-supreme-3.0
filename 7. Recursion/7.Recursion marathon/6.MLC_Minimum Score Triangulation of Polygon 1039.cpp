@@ -4,7 +4,7 @@ using namespace std;
 
 // https://leetcode.com/problems/minimum-score-triangulation-of-polygon/description/
 
-//!TC = cant solve for now 
+//!TC = cant solve for now according to current knowledge base
 int minScoreTriangulation(vector<int> &values, int i, int j) {
     // Base case: 
     // If there are only two vertices left (i + 1 == j), no triangle can be formed, so return 0.
