@@ -74,7 +74,7 @@ int mincostTicketsSir_compact_more_redable_sameLogicBt(vector<int> &days, vector
   while (days[nextIndex] < thirty_day_pass) {
     nextIndex++;
   }
-  int thirty_day_pass_cost = costs[30] +  mincostTicketsSir_compact_more_redable_sameLogicBt(days, costs, nextIndex);
+  int thirty_day_pass_cost = costs[2] +  mincostTicketsSir_compact_more_redable_sameLogicBt(days, costs, nextIndex);
 
   return min(one_day_pass_cost,min(seven_day_pass_cost,thirty_day_pass_cost));
 }

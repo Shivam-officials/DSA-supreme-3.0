@@ -51,8 +51,10 @@ int main() {
     };
 
     int target = 13;
-    cout << minimizeTheDifferenceRe(mat, 0, target, 0);
-
+    cout << minimizeTheDifferenceRe(mat, 0, target, 0)<<endl;
+    int mini = INT_MAX;
+    solve_video_Code(mat, target, 0, 0, mini);
+    cout << mini;
     return 0;
 }
 

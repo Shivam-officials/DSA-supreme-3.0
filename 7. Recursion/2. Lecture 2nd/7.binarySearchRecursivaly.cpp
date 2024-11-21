@@ -3,7 +3,7 @@
 using namespace std;
 
 //TC = O(logn) SC = O(n)
-int binarySearch(vector<int>array,int target,int start, int end ){
+int binarySearch(vector<int> &array,int target,int start, int end ){
 
     int mid = (start + end )/2;
 

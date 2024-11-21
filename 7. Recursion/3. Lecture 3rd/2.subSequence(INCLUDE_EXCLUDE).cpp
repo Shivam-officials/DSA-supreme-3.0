@@ -9,7 +9,7 @@ using namespace std;
 // TC = O(2^N) SC = O(N)
 void findAllSubsequenceWithBits(string input) {
   int count = pow(2, input.size()); // Total subsequences (2^n)
-  for (int i = 1; i < count; i++) { // Iterate from 1 to exclude the empty subsequence
+  for (int i = 0; i < count; i++) { // Iterate from 1 to exclude the empty subsequence
     int index = input.size() - 1;  // Start from the last character
     string ans = "";               // Store the current subsequence
     for (int j = i; j != 0; j >>= 1, index--) { // Process bits of i
