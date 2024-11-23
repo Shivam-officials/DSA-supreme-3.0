@@ -3,6 +3,11 @@
 #include <vector>
 using namespace std;
 
+// https://leetcode.com/problems/sudoku-solver/description/
+
+// Time complexity: O(9(N*N)), For every unassigned index, there are 9 possible options so the time complexity is O(9^(n*n)).
+// Space Complexity: O(N*N), To store the output array a matrix is needed.
+
 // Checks if placing 'option' at board[row][col] is valid
 bool isSafe(vector<vector<char>>& board, int row, int col, char option) {
     // Check row for duplicate
