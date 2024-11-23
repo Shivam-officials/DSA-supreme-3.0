@@ -32,7 +32,13 @@ void storeResult(vector<vector<char>> board, vector<vector<string>> &ans) {
  * @complexity Time: O(1), Space: O(1)
  */
 bool isSafe(vector<vector<char>> &board, int row, int col) {
-    return !rowCheck[row] && !upDiagonal[row - col] && !downDiagonal[row + col];
+    // return !rowCheck[row] && !upDiagonal[row - col] && !downDiagonal[row + col]; // complex way
+
+    if(rowCheck[row]==true)return false;
+    if(upDiagonal[row-col] == true) return false;
+    if(downDiagonal[row + col] == true ) return false;
+
+    return true;
 }
 
 /**
