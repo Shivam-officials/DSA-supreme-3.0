@@ -46,7 +46,7 @@ void printAllPermutationsForVector(vector<int> &input, int i, vector<vector<int>
 int main() {
     // Input string and vector
     string input = "abc";
-    vector<int> num{1, 2, 3,4};
+    vector<int> num{1, 2, 3,};
 
     // Print all permutations of the string
     printAllPermutationsForString(input, 0);
@@ -63,5 +63,22 @@ int main() {
         }
         cout << endl;
     }
+
+    cout << "ANOTHER WAY OF PERMUTATION FROM STL" << endl;
+
+    string str = "cab";
+    
+    // Sort the string to ensure lexicographical order for permutations
+    // Sorting ensures the first permutation is the smallest lexicographically
+    // if it is not lexicographically sorted then the permutaion of only after the current string lexicological order will be shown
+    sort(str.begin(), str.end()); 
+    cout << str << endl; // Output the first (smallest) permutation // kyuki first wali ni aati next_permutation wale me so print it here
+    
+    // Generate and print all lexicographical permutations
+    // next_permutation modifies the string in place at the reference level
+    while (next_permutation(str.begin(), str.end())) {
+        cout << str << endl; // Each permutation is directly reflected in 'str'
+    }
+
     return 0;
 }

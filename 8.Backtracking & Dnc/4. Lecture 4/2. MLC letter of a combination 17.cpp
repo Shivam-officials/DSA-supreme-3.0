@@ -25,6 +25,24 @@ void letterCombinationSolve(string &digits, string output, int index, unordered_
     }
 }
 
+void letterCombinationSolveBacktrack(string &digits, string &output, int index, unordered_map<char,string> &map, vector<string> &ans) {
+    // Base case: when index reaches the end of the digits
+    if (index >= digits.size()) {
+        ans.push_back(output); // Add the current combination to result
+        return;
+    }
+    
+    // Get the mapped characters for the current digit
+    string mappedString = map[digits[index]];
+
+    // Recur for each character in the mapped string
+    for (int i = 0; i < mappedString.length(); i++) {
+        output.push_back(mappedString[i]); 
+        letterCombinationSolveBacktrack(digits, output , index + 1, map, ans);
+        output.pop_back(); // backtrack
+    }
+}
+
 // Main function to find all letter combinations for a given set of digits
 vector<string> letterCombinations(string &digits, vector<string>& ans) {
     // Mapping of digits to corresponding letters
@@ -39,9 +57,10 @@ vector<string> letterCombinations(string &digits, vector<string>& ans) {
     map['9'] = "wxyz";
 
     if (digits == "") return ans; // Return empty if input is empty
-    
+    string output = "";
     // Start recursive function to find combinations
-    letterCombinationSolve(digits, "", 0, map, ans);
+    // letterCombinationSolve(digits, output, 0, map, ans); //bersion 1
+    letterCombinationSolveBacktrack(digits, output, 0, map, ans); // version 2
     return ans; // Return the result
 }
 
@@ -50,6 +69,7 @@ int main() {
 
     vector<string> ans;
     // Print all the combinations in ans
+    letterCombinations(digits, ans);
     for (auto elm : ans) {
         cout << elm << endl;
     }

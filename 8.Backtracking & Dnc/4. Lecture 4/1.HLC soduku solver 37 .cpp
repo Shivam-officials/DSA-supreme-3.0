@@ -11,27 +11,46 @@ using namespace std;
 // Checks if placing 'option' at board[row][col] is valid
 bool isSafe(vector<vector<char>>& board, int row, int col, char option) {
     // Check row for duplicate
-    for (int k = 0; k < 9; k++) {
+    for (int k = 0; k < 9; k++) { 
+        // Iterate through all columns in the given row to check for duplicates
         if (board[row][k] == option) {
-            return false;
-        }
-    }
-    // Check column for duplicate
-    for (int k = 0; k < 9; k++) {
-        if (board[k][col] == option) {
-            return false;
-        }
-    }
-    // Check 3x3 sub-grid for duplicate
-    for (int k = 0; k < 9; k++) {
-        int x = 3 * (row / 3) + k / 3;
-        int y = 3 * (col / 3) + k % 3;
-        if (board[x][y] == option) {
-            return false;
+            return false; // Duplicate found in the row
         }
     }
 
-    return true; // Valid placement
+    // Check column for duplicate
+    for (int k = 0; k < 9; k++) { 
+        // Iterate through all rows in the given column to check for duplicates
+        if (board[k][col] == option) {
+            return false; // Duplicate found in the column
+        }
+    }
+
+    // Check 3x3 sub-grid for duplicate
+    /** Way 1 for sub-grid check: Using mathematical computation  // LOVE BABBAR WAY
+        for (int k = 0; k < 9; k++) {
+            int x = 3 * (row / 3) + k / 3; // Row index in the sub-grid
+            int y = 3 * (col / 3) + k % 3; // Column index in the sub-grid
+            if (board[x][y] == option) {
+                return false; // Duplicate found in the sub-grid
+            }
+        }
+    */
+
+    // Way 2: More intuitive method using nested loops  //LAKSHAY WAY
+    int startRow = row - (row % 3); // Calculate the starting row of the 3x3 sub-grid
+    int startCol = col - (col % 3); // Calculate the starting column of the 3x3 sub-grid
+    for (int i = 0; i < 3; i++) { 
+        for (int j = 0; j < 3; j++) { 
+            int translated_row = i + startRow; // Calculate the row index in the sub-grid
+            int translated_col = j + startCol; // Calculate the column index in the sub-grid
+            if (board[translated_row][translated_col] == option) {
+                return false; // Duplicate found in the sub-grid
+            }
+        }
+    }
+
+    return true; // No duplicates found, placement is valid
 }
 
 // Solves the Sudoku puzzle using backtracking
