@@ -76,7 +76,7 @@ vector<vector<string>> solveNQueens(int n) {
 }
 
 int main() {
-    int n = 4; // Example: Solve for 4-Queens
+    int n = 8; // Example: Solve for 4-Queens
 
     auto ans = solveNQueens(n);
 

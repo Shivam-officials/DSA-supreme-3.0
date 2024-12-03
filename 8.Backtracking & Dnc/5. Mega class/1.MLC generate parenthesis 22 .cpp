@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+// https://leetcode.com/problems/generate-parentheses/description/
+
+//! TC  dont know bcoz of restictions in recuriosn tree currently if learnt now point then update here
+
 // Helper function to generate all valid combinations of parentheses
 /**   Parameters:
   - ans: vector to store the valid combinations
@@ -41,7 +45,7 @@ vector<string> generateParenthesis(int n) {
 
 int main()
 {
-    int n = 3;
+    int n = 4;
 
 
     auto ans = generateParenthesis(n);
