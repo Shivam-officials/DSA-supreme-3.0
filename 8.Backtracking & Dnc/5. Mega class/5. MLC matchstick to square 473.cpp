@@ -45,7 +45,7 @@ bool makeSquare(vector<int> &matchSticks) {
 
   vector<int> sides(4, 0); // Initialize sides of the square with 0
 
-  // Sort matchsticks in decreasing order for optimization
+  // Sort matchsticks in decreasing order for optimization TO ESCAPE EXTRA RECURSIVE CALLS
   sort(matchSticks.rbegin(), matchSticks.rend());
 
   return checkPossible(matchSticks, 0, sides, sum4th);

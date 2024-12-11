@@ -56,6 +56,7 @@ void mergeWithSorting(std::vector<int>& nums, int start, int end) {
     */
 }
 
+//note: inplace with gap method is best and fastest go in dnc assignment 
 
 // Function to merge two sorted subarrays in-place 
 //TC =  O(n^2)  SC = O(1)
