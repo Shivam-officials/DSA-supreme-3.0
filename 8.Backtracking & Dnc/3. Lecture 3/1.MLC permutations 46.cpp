@@ -28,18 +28,18 @@ void printAllPermutationsForString(string &input, int i) {
 //TC = O(N!) SC = O(N! * N) for storing result
 
 // Recursive function to generate all permutations of a vector
-void printAllPermutationsForVector(vector<int> &input, int i, vector<vector<int>> &ans) {
+void printAllPermutationsForVector(vector<int> &input, int start, vector<vector<int>> &ans) {
     // Base case: if the entire vector is traversed, add the current permutation to ans
-    if (i == input.size()) {
+    if (start == input.size()) {
         ans.push_back(input);
         return;
     }
 
     // Recursive case: swap each element with the current position and explore
-    for (int j = i; j < input.size(); j++) {
-        swap(input[i], input[j]); // Swap current element with position i
-        printAllPermutationsForVector(input, i + 1, ans); // Recurse for the next index
-        swap(input[i], input[j]); // Backtrack to restore original vector
+    for (int j = start; j < input.size(); j++) {
+        swap(input[start], input[j]); // Swap current element with position i
+        printAllPermutationsForVector(input, start + 1, ans); // Recurse for the next index
+        swap(input[start], input[j]); // Backtrack to restore original vector
     }
 }
 

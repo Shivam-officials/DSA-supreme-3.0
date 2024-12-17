@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/6. basic maths and pointers/2. Optimising seive and segmented seive",
-      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/6. basic maths and pointers/2. Optimising seive and segmented seive/build/Release/outRelease",
+      "cwd": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/8.Backtracking & Dnc/7.Assigment",
+      "program": "c:/My Drive/Developer/LB Codes/DSA Supreme Codes 3.0/8.Backtracking & Dnc/7.Assigment/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
