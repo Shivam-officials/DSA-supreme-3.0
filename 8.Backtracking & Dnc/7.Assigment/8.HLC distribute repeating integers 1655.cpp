@@ -83,7 +83,7 @@ bool canDistribute(vector<int> &nums, vector<int> &quantity) {
     count.push_back(pair.second);
   }
 
-  // Sort quantities in descending order for optimization
+  // Sort quantities in descending order for OPTIMISATION
   sort(quantity.rbegin(), quantity.rend());
 
   // Helper function to check if distribution is possible

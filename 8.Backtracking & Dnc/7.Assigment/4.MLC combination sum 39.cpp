@@ -21,8 +21,7 @@ void combinationSumHelper(vector<int> &candidates, int target, int start,
 
   // Iterate through candidates starting from 'start' index
   for (int i = start; i < candidates.size(); i++) {
-    if (candidates[i] <=
-        target) { // Check if the current candidate can contribute to the target
+    if (candidates[i] <= target) { // Check if the current candidate can contribute to the target
       currentVector.push_back(candidates[i]); // Include the candidate
       // Recurse with updated target and the same 'i' to allow reusing the same
       // element

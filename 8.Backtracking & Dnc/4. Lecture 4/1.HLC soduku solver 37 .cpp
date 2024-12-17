@@ -26,7 +26,7 @@ bool isSafe(vector<vector<char>>& board, int row, int col, char option) {
         }
     }
 
-    // Check 3x3 sub-grid for duplicate
+    // Check 3x3 sub-grid for duplicate... more concise
     /** Way 1 for sub-grid check: Using mathematical computation  // LOVE BABBAR WAY
         for (int k = 0; k < 9; k++) {
             int x = 3 * (row / 3) + k / 3; // Row index in the sub-grid

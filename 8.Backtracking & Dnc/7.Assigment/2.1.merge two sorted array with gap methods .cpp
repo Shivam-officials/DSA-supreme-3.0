@@ -36,6 +36,8 @@ void mergeTwoSortedOne_gap_method(vector<int> &v1, vector<int> &v2) {
   }
 }
 
+
+
 // helper function
 void quickPartitionShift(vector<int> &v2) {
   int i = 0;
@@ -58,8 +60,6 @@ void quickPartitionShift(vector<int> &v2) {
     i++;
   }
 }
-
-
 
 // Intuition: Start from v1[0], compare each element with v2[0] (smallest in v2).
 // If a value in v1 is greater than v2[0], swap it with v2[0]. After swapping,
@@ -109,10 +109,10 @@ int main() {
   cout << endl << "after merge" << endl;
 
   // Using default STL function to merge arrays (for reference)
-//   merge(v1.begin(), v1.end(), v2.begin(), v2.end(), ans.begin());
+  //   merge(v1.begin(), v1.end(), v2.begin(), v2.end(), ans.begin());
 
-  // Custom function to merge two sorted arrays without extra space
-//   mergeTwoSortedOne_gap_method(v1, v2);
+    // Custom function to merge two sorted arrays without extra space
+  //   mergeTwoSortedOne_gap_method(v1, v2);
 
   mergeTwoSortedOneWithSwapAndquickSortPartition(v1, v2);
   // Print merged v1
