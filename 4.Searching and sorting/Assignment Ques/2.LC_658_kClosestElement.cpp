@@ -107,12 +107,12 @@ vector<int> kClosestElementWithCustomComparatorSorting(vector<int> v, int k,int 
 
 int main() {
 
-  vector<int> v{1, 2};
+  vector<int> v{1,2,3,4,5};
   int x = 3;
 
   // for_each(v.begin(), v.end(), printElement);
   // auto ans = kClosestElementsTwoPointerShrinkingWindow(v, 5, 11);
   // auto ans = kClosestElementsTwoPointerExpandingWindow(v, 4, 3);
-  kClosestElementWithCustomComparatorSorting(v, 1, 1);
+  kClosestElementWithCustomComparatorSorting(v, 4, 3);
   return 0;
 }

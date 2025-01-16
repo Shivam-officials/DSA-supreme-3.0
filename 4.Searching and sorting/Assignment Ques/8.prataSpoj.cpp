@@ -4,7 +4,9 @@
 using namespace std;
 
 
-// https://www.spoj.com/problems/PRATA/
+// https://www.spoj.com/problems/PRATA/ 
+
+//idea: this code is right spoj test cases are wrong with ans data
 
 // TC = O(n * RequiredParathas * log(maxRank * RequiredParathas ^ 2))
 
@@ -74,7 +76,7 @@ int findMinTimeToCompleteOrder(vector<int> &chefs, int RequiredParathas) {
 
 int main() {
     // Example vector of chef ranks (all chefs have the same rank here).
-    vector<int> v{ 1, 1, 1, 1, 1, 1, 1, 1 };
+    vector<int> v{ 1, 1};
 
     // Find and print the minimum time to cook 8 prathas with the given chefs.
     cout << findMinTimeToCompleteOrder(v, 8);

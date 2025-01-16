@@ -1,10 +1,10 @@
+#include <algorithm>
 #include <bits/stdc++.h>
 #include <climits>
 using namespace std;
 
 
-// https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
-
+// https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
 
 // Time Complexity: O(n * log(sum - max)), Space Complexity: O(1)
 

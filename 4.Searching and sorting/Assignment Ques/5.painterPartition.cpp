@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-// https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
+// https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
 
 // Time Complexity: O(n * log(sum - max)), Space Complexity: O(1)
 
