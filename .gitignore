@@ -1,33 +1,29 @@
-# Ignore build directories globally
-/build/
-/bin/
-/out/
-/obj/
+# 1. Ignore everything by default
+*
 
-# Ignore CMake build files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
+# 2. Allow directories to be scanned (crucial for git to traverse subfolders)
+!**/
 
-# Ignore compiled object files and executables
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.dylib
+# 3. Whitelist source code and build configuration files
+!*.cpp
+!*.h
+!*.hpp
+!*.c
+!*.txt
+!*.md
+!CMakeLists.txt
 
-# Ignore debugging files
-*.pdb
-*.ilk
-*.json
-# Ignore VS Code workspace settings
-.vscode/
+# 4. Whitelist configuration and settings files
+!.gitignore
+!.vscode/
+!.vscode/**
 
-# Ignore log files
-*.log
+# 5. Specifically ignore IDE settings, build directories, and cache
+.idea/
+cmake-build-*/
+build/
+bin/
+out/
+obj/
 
-# Ignore temporary files
-*.tmp
-*.temp
+

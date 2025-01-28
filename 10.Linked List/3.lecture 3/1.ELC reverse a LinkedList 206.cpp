@@ -10,6 +10,7 @@ using namespace std;
 struct ListNode {
     int val; // Value of the node
     ListNode *next; // Pointer to the next node
+    
     ListNode() : val(0), next(nullptr) {} // Default constructor
     ListNode(int x) : val(x), next(nullptr) {} // Constructor with value
     ListNode(int x, ListNode *next) : val(x), next(next) {} // Constructor with value and next node
