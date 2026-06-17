@@ -107,14 +107,14 @@ int main() {
     // Node first(5) ;
     // cout << first.data<<" "<<first.next;
 
-/** 
+/**
     // //dynamic memory object creation
     // Node* first = new Node(5);
     // cout << first->data<<" "<<first->next;
 
     Node* head = nullptr;
     Node* tail = nullptr;
-    
+
     //LL is empty
     head =  insertAtHead(10, head, tail);
     //10->nullptr

@@ -176,7 +176,7 @@ void deleteAtSpecificPoint(int _position, Node* &head, Node* &tail){
 
         Node* nodeToBeDeleted = tail;
 
-        //isolating the tail node
+        //*isolating the tail node
         temp->next = nullptr;
         nodeToBeDeleted->prev = nullptr;
          

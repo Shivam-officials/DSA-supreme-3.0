@@ -41,7 +41,7 @@ void printList(Node *node) {
 
 */
 
-// https://www.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
+//  
 
 //note:INTITUION: simply reverse the linked list add the number in nodes one by one acc to LL and after adding reverse the LL again
 
